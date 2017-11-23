@@ -28,7 +28,7 @@
     "account": {
       "type": "hasOne",
       "model": "Account",
-      "foreignKey": ""
+      "foreignKey": "company_id"
     }
   },
   "acls": [],
