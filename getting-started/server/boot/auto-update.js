@@ -1,24 +1,41 @@
 'use strict';
 
 module.exports = function(app) {
-  app.dataSources.MySQL.autoupdate('Product', err => {
+  const { MySQL } = app.dataSources;
+  const { Book, Author } = app.models;
+
+  MySQL.autoupdate('Product', err => {
     if (err) {
       throw err;
     }
     console.log('Product table Synced');
   });
 
-  app.dataSources.MySQL.autoupdate('Company', err => {
+  MySQL.autoupdate('Company', err => {
     if (err) {
       throw err;
     }
     console.log('Company table Synced');
+
+    MySQL.autoupdate('Account', err => {
+      if (err) {
+        throw err;
+      }
+      console.log('Account table Synced');
+    });
   });
 
-  app.dataSources.MySQL.autoupdate('Account', err => {
+  MySQL.autoupdate('Author', err => {
     if (err) {
       throw err;
     }
-    console.log('Account table Synced');
+    console.log('Author table Synced');
+
+    MySQL.autoupdate('Book', err => {
+      if (err) {
+        throw err;
+      }
+      console.log('Book table Synced');
+    });
   });
 };

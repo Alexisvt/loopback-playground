@@ -28,5 +28,13 @@
   "Category": {
     "dataSource": "MySQL",
     "public": true
+  },
+  "Book": {
+    "dataSource": "MySQL",
+    "public": true
+  },
+  "Author": {
+    "dataSource": "MySQL",
+    "public": true
   }
 }
