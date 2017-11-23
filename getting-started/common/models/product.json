@@ -16,6 +16,14 @@
       "required": true
     }
   },
+  "foreignKeys": {
+    "category_id": {
+      "name": "category_id",
+      "foreignKey": "category_id",
+      "entityKey": "id",
+      "entity": "Category"
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],

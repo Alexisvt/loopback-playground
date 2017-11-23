@@ -4,11 +4,19 @@ module.exports = function(app) {
   const { MySQL } = app.dataSources;
   const { Book, Author } = app.models;
 
-  MySQL.autoupdate('Product', err => {
+  MySQL.autoupdate('Category', err => {
     if (err) {
       throw err;
     }
-    console.log('Product table Synced');
+
+    console.log('Category table Synced');
+
+    MySQL.autoupdate('Product', err => {
+      if (err) {
+        throw err;
+      }
+      console.log('Product table Synced');
+    });
   });
 
   MySQL.autoupdate('Company', err => {

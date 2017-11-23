@@ -6,11 +6,6 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
-  "validations": [],
-  "relations": {},
-  "acls": [],
-  "methods": {},
   "foreignKeys": {
     "company_id": {
       "name": "company_id",
@@ -18,5 +13,10 @@
       "entityKey": "id",
       "entity": "Company"
     }
-  }
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
 }
