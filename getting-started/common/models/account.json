@@ -10,5 +10,13 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {},
+  "foreignKeys": {
+    "company_id": {
+      "name": "company_id",
+      "foreignKey": "company_id",
+      "entityKey": "id",
+      "entity": "Company"
+    }
+  }
 }
