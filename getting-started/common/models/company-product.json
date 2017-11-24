@@ -1,0 +1,37 @@
+{
+  "name": "CompanyProduct",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "foreignKeys": {
+    "companyId": {
+      "name": "companyId",
+      "foreignKey": "companyId",
+      "entityKey": "id",
+      "entity": "Company"
+    },
+    "productId": {
+      "name": "productId",
+      "foreignKey": "productId",
+      "entityKey": "id",
+      "entity": "Product"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "companyId"
+    },
+    "product": {
+      "type": "belongsTo",
+      "model": "Product",
+      "foreignKey": "productId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

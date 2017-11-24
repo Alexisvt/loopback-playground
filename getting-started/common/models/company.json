@@ -29,6 +29,13 @@
       "type": "hasOne",
       "model": "Account",
       "foreignKey": "company_id"
+    },
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": "companyId",
+      "through": "CompanyProduct",
+      "keyThrough": "productId"
     }
   },
   "acls": [],

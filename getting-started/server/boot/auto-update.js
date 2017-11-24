@@ -30,6 +30,13 @@ module.exports = function(app) {
         throw err;
       }
       console.log('Account table Synced');
+
+      MySQL.autoupdate('CompanyProduct', err => {
+        if (err) {
+          throw err;
+        }
+        console.log('CompanyProduct table Synced');
+      });
     });
   });
 

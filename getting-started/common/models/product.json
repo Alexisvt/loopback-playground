@@ -6,6 +6,14 @@
   "options": {
     "validateUpsert": true
   },
+  "foreignKeys": {
+    "category_id": {
+      "name": "category_id",
+      "foreignKey": "category_id",
+      "entityKey": "id",
+      "entity": "Category"
+    }
+  },
   "properties": {
     "name": {
       "type": "string",
@@ -16,16 +24,16 @@
       "required": true
     }
   },
-  "foreignKeys": {
-    "category_id": {
-      "name": "category_id",
-      "foreignKey": "category_id",
-      "entityKey": "id",
-      "entity": "Category"
+  "validations": [],
+  "relations": {
+    "companies": {
+      "type": "hasMany",
+      "model": "Company",
+      "foreignKey": "productId",
+      "through": "CompanyProduct",
+      "keyThrough": "companyId"
     }
   },
-  "validations": [],
-  "relations": {},
   "acls": [],
   "methods": {}
 }

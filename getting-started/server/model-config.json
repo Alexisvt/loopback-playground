@@ -36,5 +36,9 @@
   "Author": {
     "dataSource": "MySQL",
     "public": true
+  },
+  "CompanyProduct": {
+    "dataSource": "MySQL",
+    "public": false
   }
 }
